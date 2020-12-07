@@ -10,19 +10,19 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    buttons.cpp \
     circle.cpp \
     config.cpp \
     game.cpp \
     main.cpp \
-    menu.cpp \
     score.cpp \
     tempo.cpp
 
 HEADERS += \
+    buttons.h \
     circle.h \
     config.h \
     game.h \
-    menu.h \
     score.h \
     tempo.h
 

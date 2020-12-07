@@ -1,17 +1,18 @@
-#ifndef MENU_H
-#define MENU_H
+#ifndef BUTTONS_H
+#define BUTTONS_H
 
 #include <QGraphicsRectItem>
 #include <QGraphicsSceneMouseEvent>
 #include <QGraphicsTextItem>
+#include <QMediaPlayer>
 #include <QBrush>
 #include <QFont>
 
-class Menu : public QObject, public QGraphicsRectItem
+class Buttons : public QObject, public QGraphicsRectItem
 {
     Q_OBJECT
 public:
-    Menu(QString name, QGraphicsItem *parent=NULL);
+    Buttons(QString name, QGraphicsItem *parent=NULL);
 
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void hoverEnterEvent(QGraphicsSceneHoverEvent *event);
@@ -22,6 +23,8 @@ signals:
 
 private:
     QGraphicsTextItem *buttonText;
+    //QMediaPlayer *buttonSound;
+
 };
 
-#endif // MENU_H
+#endif // BUTTONS_H

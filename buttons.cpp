@@ -1,6 +1,6 @@
-#include "menu.h"
+#include "buttons.h"
 
-Menu::Menu(QString name, QGraphicsItem *parent) : QGraphicsRectItem(parent)
+Buttons::Buttons(QString name, QGraphicsItem *parent) : QGraphicsRectItem(parent)
 {
     //menu buttons layout
     setRect(0, 0, 200, 50);
@@ -17,21 +17,25 @@ Menu::Menu(QString name, QGraphicsItem *parent) : QGraphicsRectItem(parent)
     int yPos = rect().height()/2 - buttonText->boundingRect().height()/2;
     buttonText->setPos(xPos,yPos);
 
+    //button sound
+    //buttonSound = new QMediaPlayer();
+    //buttonSound->setMedia(QUrl("qrc:/sounds/button2.mp3"));
+
     setAcceptHoverEvents(true);
 }
 
-void Menu::mousePressEvent(QGraphicsSceneMouseEvent *event){
+void Buttons::mousePressEvent(QGraphicsSceneMouseEvent *event){
     emit clicked();
 }
 
-void Menu::hoverEnterEvent(QGraphicsSceneHoverEvent *event){
+void Buttons::hoverEnterEvent(QGraphicsSceneHoverEvent *event){
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
     brush.setColor(Qt::lightGray);
     setBrush(brush);
 }
 
-void Menu::hoverLeaveEvent(QGraphicsSceneHoverEvent *event){
+void Buttons::hoverLeaveEvent(QGraphicsSceneHoverEvent *event){
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
     brush.setColor(Qt::darkGray);

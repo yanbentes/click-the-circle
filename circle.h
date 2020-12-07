@@ -19,6 +19,7 @@ protected:
     float circleSize;
     float xPos, yPos;
     QBrush circleColor;
+    QMediaPlayer *clickSound;
 };
 
 #endif // CIRCLE_H

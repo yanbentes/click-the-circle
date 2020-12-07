@@ -3,11 +3,12 @@
 
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
 #include <QTimer>
 #include <QMediaPlayer>
 
 #include "circle.h"
-#include "menu.h"
+#include "buttons.h"
 #include "score.h"
 #include "tempo.h"
 
@@ -25,7 +26,6 @@ public slots:
     void displayMenu();
     void start();
     void end();
-
 };
 
 #endif // GAME_H

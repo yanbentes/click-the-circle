@@ -17,7 +17,7 @@ void Tempo::decrease()
     setDefaultTextColor(Qt::white);
     setFont(QFont("times",16));
 
-    if(m_time == 25){
+    if(m_time == 0){
         emit stop();
     }
 }

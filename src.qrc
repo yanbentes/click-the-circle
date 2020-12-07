@@ -1,10 +1,7 @@
 <RCC>
     <qresource prefix="/sounds">
         <file>clickSound.mp3</file>
-        <file>errorSound.mp3</file>
-        <file>button1.mp3</file>
-        <file>button2.mp3</file>
-        <file>off.mp3</file>
-        <file>on.mp3</file>
+        <file>missSound.mp3</file>
+        <file>shootSound.mp3</file>
     </qresource>
 </RCC>

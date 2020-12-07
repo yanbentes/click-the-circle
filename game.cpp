@@ -30,7 +30,7 @@ void Game::displayMenu()
     scene->addItem(title);
 
     //play button (jogar)
-    Menu *playButton = new Menu(QString("Jogar"));
+    Buttons *playButton = new Buttons(QString("Jogar"));
     int pxPos = this->width()/2 - playButton->boundingRect().width()/2;
     int pyPos = 240;
     playButton->setPos(pxPos,pyPos);
@@ -38,7 +38,7 @@ void Game::displayMenu()
     scene->addItem(playButton);
 
     //configurations button (configurações)
-    Menu *configButton = new Menu(QString("Configurações"));
+    Buttons *configButton = new Buttons(QString("Configurações"));
     int cxPos = this->width()/2 - configButton ->boundingRect().width()/2;
     int cyPos = 330;
     configButton->setPos(cxPos,cyPos);
@@ -46,7 +46,7 @@ void Game::displayMenu()
     scene->addItem(configButton);
 
     //quit button (sair)
-    Menu *quitButton = new Menu(QString("Sair"));
+    Buttons *quitButton = new Buttons(QString("Sair"));
     int qxPos = this->width()/2 - quitButton->boundingRect().width()/2;
     int qyPos = 420;
     quitButton->setPos(qxPos,qyPos);
@@ -103,7 +103,7 @@ void Game::end()
     scene->addItem(targets);
 
     //restart button (reiniciar)
-    Menu *restartButton = new Menu(QString("Reiniciar"));
+    Buttons *restartButton = new Buttons(QString("Reiniciar"));
     int rxPos = this->width()/2 - restartButton->boundingRect().width()/2;
     int ryPos = 240;
     restartButton->setPos(rxPos,ryPos);
@@ -111,7 +111,7 @@ void Game::end()
     scene->addItem(restartButton);
 
     //menu button
-    Menu *menuButton = new Menu(QString("Menu"));
+    Buttons *menuButton = new Buttons(QString("Menu"));
     int mxPos = this->width()/2 - menuButton->boundingRect().width()/2;
     int myPos = 330;
     menuButton->setPos(mxPos,myPos);

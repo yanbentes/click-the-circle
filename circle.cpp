@@ -14,14 +14,26 @@ Circle::Circle(QGraphicsItem *parent)
     this->setPen(Qt::NoPen);
     this->setBrush(circleColor);
     this->setRect(QRect(xPos, yPos, circleSize, circleSize));
+
+    //click sound
+    clickSound = new QMediaPlayer();
+    clickSound->setMedia(QUrl("qrc:/sounds/shootSound.mp3"));
 }
 
 void Circle::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-     //generanting random sizes and positions for the circle
-     quint32 circleSize = QRandomGenerator::global()->bounded(15, 60);
-     quint32 xPos = QRandomGenerator::global()->bounded(100, 700);
-     quint32 yPos = QRandomGenerator::global()->bounded(100, 500);
+    //click sound
+    if(clickSound->state() == QMediaPlayer::PlayingState){
+        clickSound->setPosition(0);
+    }
+    else if(clickSound->state() == QMediaPlayer::StoppedState){
+        clickSound->play();
+    }
+
+    //generanting random sizes and positions for the circle
+    quint32 circleSize = QRandomGenerator::global()->bounded(15, 60);
+    quint32 xPos = QRandomGenerator::global()->bounded(100, 700);
+    quint32 yPos = QRandomGenerator::global()->bounded(100, 500);
 
     this->setRect(QRect(xPos, yPos, circleSize, circleSize));
 
