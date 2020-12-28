@@ -13,8 +13,8 @@ public:
     int getTargets();
 
 private:
-    int m_score;
-    int targets;
+    int m_score=0;
+    int targets=0;
 };
 
 #endif // SCORE_H

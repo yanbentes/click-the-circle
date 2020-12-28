@@ -2,8 +2,8 @@
 
 Score::Score(QGraphicsItem *parent) : QGraphicsTextItem(parent)
 {
-    m_score = 0;
-    targets = 0;
+    //m_score = 0;
+    //targets = 0;
     //setPos(375, 10);
     setPlainText(QString::number(m_score));
     setDefaultTextColor(Qt::white);
