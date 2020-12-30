@@ -1,6 +1,6 @@
 # Clicker
 
-*Trabalho final da diciplina de programação 2*
+#Trabalho final da diciplina de programação 2
 
 Jogo desenvolvido com o framework Qt Creator
 
